@@ -1,0 +1,6 @@
+table, tr, td{
+    border: 10px solid blueviolet;
+    border-collapse: collapse;
+    margin: 10rem;
+}
+
