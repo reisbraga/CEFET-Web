@@ -1,0 +1,112 @@
+.texto{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+}
+
+header{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+:root{
+    --azul: white;
+}
+
+
+header nav{
+    height: 2rem;
+    background-color: red;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.titulo {
+    color: white;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    align-items: center;
+    background-image: url("banner.jpeg");
+}
+
+.sumario {
+    height: 2rem;
+    background-color: rgb(5, 122, 231);
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+
+header nav a{
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px - 4rem);
+}
+
+fieldset{
+    margin: 5rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+
+    
+}
+
+select{
+    border: 1px solid gray;
+    background-color: white;
+}
+
+input {
+    border: 1px solid gray;
+}
+
+textarea {
+    border: 1px solid gray;
+    margin-bottom: 1rem;
+}
+
+div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.quadro {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.botoes button {
+    margin: 0 0.5rem;
+    background-color: rgb(5, 122, 231);
+    color: white;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+footer{
+    align-items: center;
+    color: white;
+    background-color: rgb(5, 122, 231);
+    height: 40px;
+
+    
+}
