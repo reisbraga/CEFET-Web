@@ -1,0 +1,115 @@
+/*___________________________HEADER____________________________*/
+
+
+.texto{
+    font-family: 'Times New Roman';
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 9rem;
+    justify-content: space-evenly;
+    text-decoration:none;
+}
+
+.titulo {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+    background-image: url("banner.jpeg");
+}
+
+.sumario {
+    height: 2rem;
+    background-color: rgb(5, 122, 231);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+/* __________________________FOOTER__________________*/
+
+footer{
+    align-items: center;
+    height: 40px;
+    color: white;
+    background-color: rgb(5, 122, 231);
+}
+
+
+/*_______________________________________________________________________________________*/
+
+
+/* _______________________FAQ___________________________*/
+.link {
+    color: black;
+    text-decoration-line: none;
+
+}
+
+
+
+
+
+/*_______________________CURSO____________________________*/
+table, tr, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 2rem;
+}
+
+
+table tr td b{
+    display: flex;
+    justify-content: center;
+}
+
+table tr td{
+    padding: 5px;
+    text-align: center;
+    -webkit-text-stroke-width: 0.03rem;
+}
+
+
+.materia {
+    text-align: left;
+    -webkit-text-stroke-width: 0rem;
+}
+
+.nota {
+    -webkit-text-stroke-width: 0rem;
+}
+
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/* __________________________CONTATO_________________*/
+
+
+
+
+.quadro {
+    margin-right: 100rem;
+    margin-left: 40rem;
+    align-items: center;
+}
+
+.botoes button {
+    margin: 0 0.5rem;
+    background-color: rgb(5, 122, 231);
+    color: white;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
