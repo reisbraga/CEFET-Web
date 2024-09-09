@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=New+Amsterdam&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    display: block;
+    background-color: rgb(17, 19, 16);
+    
+}
+
+input {
+    display: block;
+    background-color: rgb(134, 151, 119);
+}
+
+input:hover {
+    display: block;
+    background-color: rgb(115, 134, 100);
+    color:aliceblue;
+}
+
+nav {
+    background-color: rgb(17, 19, 16);
+    color:white;
+    width:12rem;
+    height: 60rem;
+    font-size:1.7em;
+    
+}
+
+
+.Voltar {
+    color: white;
+    text-decoration: none;
+    margin-top: 30rem;
+    background-color: rgb(134, 151, 119);
+}
+
+.Voltar:hover {
+    color: rgb(44, 240, 26);
+}
+
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: greenyellow;
+    text-decoration: blanchedalmond;
+}
+
+main {
+    background-color: rgb(134, 151, 119);
+    min-height: calc(100vh - 10rem);
+    
+    margin-left: 12rem;
+    margin-top: -60rem;
+    padding-top:-60rem;
+    width:108rem;
+    height: 55rem;
+    
+
+}
+
+.title {
+    font-family: New Amsterdam;
+    color: rgb(51, 255, 0);
+}
+
+
+img {
+    width: 150px;
+    align-self: center;
+    margin-bottom: 3rem;
+    margin-top: 40rem;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.message {
+    color:red;
+    border-collapse: collapse;
+}
+
+button {
+    background-color: greenyellow;
+    border-radius: 10rem;
+}
+
+button:hover {
+    background-color: rgb(51, 255, 0);
+}
+
+footer {
+    height: 3rem;
+}

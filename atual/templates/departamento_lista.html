@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+{% set mensagens = get_flashed_messages() %}
+{% if mensagens %}
+    {% for msg in mensagens %}
+        {{ msg }}
+    {% endfor %}
+{% endif %}
+
+<a href="/departamento/add">+ Adicionar</a>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Idade</th>
+        <th>Remove</th>
+
+
+
+    </tr>
+    {% for departamento in dados%}
+    <tr>
+        <td>{{departamento.nome}}</td>
+        <td>{{departamento.email}}</td>
+        <td>{{departamento.idade}}</td>
+        <td>
+            <a href="departamento/edita/{{departamento.id_departamento}}">Editar</a>
+        </td>
+        <td>
+            <a href="/departamento/remove/{{departamento.id_departamento}}">remover</a>
+    </tr>
+
+
+    {% endfor %}
+
+</table>
+
+<a href="/" class="Voltar">Voltar</a>
+
+{%endblock%}
