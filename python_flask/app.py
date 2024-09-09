@@ -16,7 +16,7 @@ from flask import Flask, render_template, request, flash, redirect
 app = Flask(__name__)
 from database import db
 from flask_migrate import Migrate
-from models import Usuario
+from models import Departamento
 #do aquivo database.py importa o db
 app.config['SECRET_KEY'] = 'JHG8BJXKSAJK-0j-JKhjn87'
 
@@ -33,88 +33,70 @@ migrate = Migrate(app, db)
 def index():
     return render_template('index.html')
 
-@app.route('/aula')
-@app.route('/aula/<nome>')
-@app.route('/aula/<nome>/<curso>')
-@app.route('/aula/<nome>/<curso>/<int:ano>')
-def aula(nome = 'João', curso='Informática', ano = 1):
-    dados = {'nome':nome, 'curso':curso, 'ano':ano}
-    return render_template ('aula.html', dados_curso = dados)
 
 
-@app.route('/form')
-def form():
-    return render_template('form.html')
 
-
-@app.route('/dados', methods=['POST'])
-def dados():
-    flash('Dados enviados!!!')
-    dados = request.form
-    return render_template('dados.html', dados=dados)
-
-
-@app.route('/usuario')
+@app.route('/departamento')
 def usuario():
-    u = Usuario.query.all()
-    return render_template('usuario_lista.html', dados = u)
+    u = Departamento.query.all()
+    return render_template('departamento_lista.html', dados = u)
 
-@app.route('/usuario/add')
+@app.route('/departamento/add')
 def usuario_add():
-    return render_template('usuario_add.html')
+    return render_template('departamento_add.html')
 
-@app.route('/usuario/save', methods=['POST'])
+@app.route('/departamento/save', methods=['POST'])
 def usuario_save():
     nome = request.form.get('nome')
-    email = request.form.get('email')
-    idade = request.form.get('idade')
-    if nome and email and idade:
-        usuario = Usuario(nome, email, idade)
+    responsavel = request.form.get('responsavel')
+    numero_funcionarios = request.form.get('numero_funcionarios')
+    if nome and responsavel and numero_funcionarios:
+        usuario = Departamento(nome, responsavel, numero_funcionarios)
         db.session.add(usuario)
         db.session.commit() # salva
         flash('Usuario cadastrado com sucesso')
-        return redirect('/usuario')
+        return redirect('/departamento')
     else:
         flash('Preencha todos os campos!!!')
-        return redirect('/usuario/add')
+        return redirect('/departamento/add')
 
 
-@app.route('/usuario/remove/<int:id>')
-def usuario_remove(id):
+@app.route('/departamento/remove/<int:id>')
+def usuario_remove(id_departamento):
     if id > 0:
-        usuario = Usuario.query.get(id)
+        usuario = Departamento.query.get(id_departamento)
         db.session.delete(usuario)
         db.session.commit()
         flash('Usuário removido com sucesso!!!')
-        return redirect('/usuario')
+        return redirect('/departamento')
     else:
         flash('Caminho incorreto!!!')
-        return redirect('/usuario')
+        return redirect('/departamento')
 
 
-@app.route('/usuario/edita/<int:id>')
-def usuario_edita(id):
-    usuario = Usuario.query.get(id)
-    return render_template('usuario_edita.html', dados = usuario)
+@app.route('/departamento/edita/<int:id>')
+def usuario_edita(id_departamento):
+    usuario = Departamento.query.get(id_departamento)
+    return render_template('departamento_edita.html', dados = usuario)
 
 
-@app.route('/usuario/editasave', methods=['POST'])
-def usuario_editasave():
+@app.route('/departamento/editasave', methods=['POST'])
+def departamento_editasave():
     nome = request.form.get('nome')
-    email = request.form.get('email')
-    idade = request.form.get('idade')
-    id = request.form.get('id')
-    if id and nome and email and idade:
-        usuario = Usuario.query.get(id)
+    responsavel = request.form.get('responsavel')
+    numero_funcionarios = request.form.get('numero_funcionarios')
+    id_departamento = request.form.get('id_departamento')
+    if id_departamento and nome and responsavel and numero_funcionarios:
+        usuario = Departamento.query.get(id_departamento)
         usuario.nome = nome
-        usuario.email = email
-        usuario.idade = idade
+        usuario.responsavel = responsavel
+        usuario.numero_funcionarios = numero_funcionarios
         db.session.commit()
         flash('Dados recebidos com sucesso')
-        return redirect('/usuario')
+        return redirect('/departamento')
     else:
         flash('Faltando dados')
-        return redirect('/usuario')
+        return redirect('/departamento')
 
 
 

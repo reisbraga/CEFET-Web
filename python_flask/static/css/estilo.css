@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+
 a, input {
     display: block;
 }
 
+nav {
+    background-color: bisque;
+}
+
+.title {
+    font-family: Nerko One;
+    color: rgb(197, 48, 98);
+}
+
+
 img {
     width: 150px;
+    align-self: center;
 }
 
 table, tr, td, th {

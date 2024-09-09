@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+        <div class=message>
+            {{ msg }}
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    <form action="/departamento/editasave" method="post">
+        <input type="hidden" name="id_departamento" value="{{dados.id_departamento}}">
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" value="{{dados.nome}}">
+
+        <label for="responsavel">E-mail:</label>
+        <input type="text" name="responsavel" id="responsavel" value="{{dados.responsavel}}">
+
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" value="{{dados.numero_funcionarios}}">
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <a href="/">Voltar</a>
+
+    {%endblock%}
