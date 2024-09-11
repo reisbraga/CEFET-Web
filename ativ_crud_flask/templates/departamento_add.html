@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+        <div class=message>
+            {{ msg }}
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    <form action="/departamento/save" method="post">
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="responsavel">Responsável:</label>
+        <input type="text" name="responsavel" id="responsavel">
+
+        <label for="numero_funcionarios">Numero de Funcionários:</label>
+        <input type="number" name="numero_funcionarios" id="numero_funcionarios">
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <button><a href="/" class="Voltar">⮪ Voltar</a></button>
+
+    {%endblock%}

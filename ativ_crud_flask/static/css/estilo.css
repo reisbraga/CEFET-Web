@@ -1,0 +1,220 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    display: block;
+    background-color: rgb(17, 19, 16);
+    
+}
+
+input {
+    display: block;
+    background-color: rgb(176, 204, 181);
+}
+
+input:hover {
+    display: block;
+    background-color: rgb(152, 184, 158);
+    color:rgb(255, 255, 255);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 10rem;
+    background-color: rgb(53, 189, 48);
+    /* 
+    background-position-y:10em;
+    background-size: 100%;
+    
+    
+    background-image: url("/static/img/banner.jpg");
+     */
+    
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    font-family: Finger Paint;
+}
+
+
+
+
+
+
+nav {
+
+    height: 3rem;
+    background: linear-gradient(rgb(176, 204, 181), rgb(156, 192, 163), rgb(176, 204, 181));
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+
+
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: linear-gradient(rgb(176, 204, 181), rgb(156, 192, 163), rgb(176, 204, 181));
+    font-size: 1.5rem;
+    font-family: Finger Paint;
+
+}
+
+nav a:hover {
+    color: rgb(66, 194, 73);
+}
+
+
+
+
+.icone_home {
+    height: 10rem;
+}
+
+
+form {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    font-size: 2rem;
+    
+
+    margin-left: 47.5rem;
+    margin-right: 47.5rem;
+    
+}
+
+.edita {
+    background-color: white;
+    
+}
+
+.botões {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(134, 151, 119);
+    
+    
+}
+
+.botões:hover {
+    color: rgb(44, 240, 26);
+}
+
+.Voltar  button a{
+    color: white;
+    text-decoration: none;
+    background-color: rgb(134, 151, 119);
+
+}
+
+.Voltar{
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    padding-top: calc(35rem - 5rem);
+    position: static;
+}
+
+.title {
+    font-family: Finger Paint;
+    color: rgb(24, 182, 53);
+    font-size: 3rem;
+    /*text-shadow: 0px 0px 5px rgb(26, 37, 28);*/
+
+    background-color: rgb(255, 255, 255);
+    margin-left: 49rem;
+    margin-right: 49rem;
+
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+
+
+main {
+    min-height: calc(100vh - 15rem);
+    background-image: url("/static/img/folha.jpg");
+    background-size: 5%;
+    
+
+
+}
+
+.img {
+    width: 5rem;
+    align-self: center;
+
+    position: absolute;
+    
+    
+}
+
+
+
+
+table, tr, td, th {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+    
+    margin: auto;
+
+    align-self: center;
+    justify-self: center ;
+    background-color: rgb(176, 204, 181);
+
+}
+
+
+.textoqbugou {
+    background-color: rgb(176, 204, 181);
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.message {
+    color:red;
+    border-collapse: collapse;
+}
+
+button {
+    background-color: rgb(131, 161, 136);
+    border-radius: 10rem;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(51, 255, 0);
+    color: black;
+}
+
+footer {
+    height: 2rem;
+    background-color: rgb(16, 16, 16);
+    color:aliceblue;
+    text-align: right;
+    
+    width: 100%;
+}
