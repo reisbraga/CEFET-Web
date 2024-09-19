@@ -1,0 +1,154 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    display: block;
+    background-color: rgb(17, 19, 16);
+    
+}
+
+input {
+    display: block;
+    background-color: rgb(176, 204, 181);
+}
+
+input:hover {
+    display: block;
+    background-color: rgb(152, 184, 158);
+    color:rgb(255, 255, 255);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:flex-start;
+    height: 10rem;
+    background-color: brown;
+
+}
+
+.img {
+    
+    height: 1rem;
+    
+}
+
+
+
+form {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    font-size: 2rem;
+    
+
+    margin-left: 47.5rem;
+    margin-right: 47.5rem;
+    
+}
+
+
+
+
+.Voltar  button a{
+    color: white;
+    text-decoration: none;
+    background-color: rgb(134, 151, 119);
+
+}
+
+.Voltar{
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    padding-top: calc(35rem - 5rem);
+    position: static;
+}
+
+.Adicionar {
+    background-color: rgb(131, 161, 136);
+    border-radius: 10rem; /* com porcentagem arrendonda o botão inteiro, n só a borda*/
+    color: white;
+}
+
+
+.Adicionar:hover {
+    background-color: rgb(51, 255, 0);
+    color: black;
+    text-decoration: none;
+}
+
+.title {
+    font-family: Finger Paint;
+    color: rgb(24, 182, 53);
+    font-size: 3rem;
+    /*text-shadow: 0px 0px 5px rgb(26, 37, 28);*/
+
+    background-color: rgb(255, 255, 255);
+    margin-left: 49rem;
+    margin-right: 49rem;
+
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+
+
+main {
+    min-height: calc(100vh - 15rem);
+    background-color: white;
+    background-size: 5%;
+    
+
+}
+
+
+
+
+
+
+table, tr, td, th {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+    
+    margin: auto;
+
+    align-self: center;
+    justify-self: center ;
+    background-color: rgb(176, 204, 181);
+
+}
+
+
+.message {
+    color:red;
+    border-collapse: collapse;
+}
+
+
+
+footer {
+    height: 2rem;
+    background-color: rgb(16, 16, 16);
+    color:aliceblue;
+    text-align: right;
+    width: 100%;
+
+}

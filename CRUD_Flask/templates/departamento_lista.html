@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+{% set mensagens = get_flashed_messages() %}
+{% if mensagens %}
+    {% for msg in mensagens %}
+        {{ msg }}
+    {% endfor %}
+{% endif %}
+
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Responsável</th>
+        <th>Numero de Funcionários</th>
+
+    </tr>
+    {% for departamento in dados%}
+    <tr>
+        <td>{{departamento.nome}}</td>
+        <td>{{departamento.responsavel}}</td>
+        <td>{{departamento.numero_funcionarios}}</td>
+        
+
+
+    {% endfor %}
+
+</table>
+<button><a href="/departamento/add" class="Adicionar">+ Adicionar</a></button>
+
+{%endblock%}
